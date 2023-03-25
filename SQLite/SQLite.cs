@@ -65,6 +65,7 @@ namespace SQLite
                 dt.Columns.Add("Name", typeof(string));
                 dt.Load(reader);
                 dataGridView1.DataSource = dt;
+                dataGridView1.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
                 connection.Close();
             }
